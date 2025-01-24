@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
+import Header from "./_components/Header";
 
-const Provider = ({children}:{children:React.ReactNode}) => {
+const Provider = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-      {children}
+      <Header />
+      <div className="px-10 lg:px-32 xl:px-48 2xl:px-56">{children}</div>
     </div>
   );
 };
