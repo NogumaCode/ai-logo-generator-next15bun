@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Noto_Sans_JP } from "next/font/google";
+import Provider from "./Provider";
+
 
 const font = Noto_Sans_JP({ subsets: ["latin"] });
 
@@ -17,10 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body
-        className={` ${font.className} antialiased`}
-      >
-        {children}
+      <body className={` ${font.className} antialiased`}>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
